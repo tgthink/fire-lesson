@@ -1,0 +1,24 @@
+{
+  "name": "fire-course",
+  "version": "1.0.0",
+  "description": "我的课程",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tgthink/fire-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tgthink/fire-course/issues"
+  },
+  "homepage": "https://github.com/tgthink/fire-course#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-less": "^3.3.0"
+  }
+}

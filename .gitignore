@@ -1,0 +1,5 @@
+swagger
+node_modules
+*.rar
+*.zip
+.git
