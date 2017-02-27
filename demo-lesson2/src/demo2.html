@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>类型检测</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = 124;
+		var b = function () {
+			this.a = "aaaaaaaa";
+			console.log(this.a);
+		};
+		var c = new b();
+		console.log(b instanceof Object);
+
+
+		console.log("======================================================b start");
+		console.log(b.prototype);
+		console.log(typeof b.prototype);
+		console.log("======================================================b end");
+		console.log(Function.prototype);
+		console.log(typeof Function.prototype);
+		console.log(c.prototype);
+
+		console.log("======================================================");
+		function Person(){}
+		function Student(){
+			this.name = "Student";
+		}
+		Student.prototype = new Person();
+		Student.prototype.constructor = Student;
+		console.log(Student.prototype);
+		console.log(Student.prototype.constructor);
+
+		var oStudent = new Student();
+	    var oPerson = new Person();
+		console.log("oStudent.__proto__:", oStudent.__proto__);
+		console.log("oStudent.__proto__.__proto__:", oStudent.__proto__.__proto__);
+
+	    console.log("oStudent instanceof Student:", oStudent instanceof Student);
+	    console.log("oPerson instanceof Person:", oPerson instanceof Person);
+	    
+	    console.log("oStudent instanceof Person:", oStudent instanceof Person);
+	    console.log("oPerson instanceof Student:", oPerson instanceof Student);
+	</script>
+</body>
+</html>
